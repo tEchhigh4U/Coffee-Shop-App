@@ -1,13 +1,18 @@
 {
   "expo": {
-    "name": "lesson01",
-    "slug": "lesson01",
+    "name": "myApp",
+    "slug": "myApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/coffee-icon.png",
+    "scheme": "myApp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash":{
+      "image":"./assets/images/coffee-splash.png",
+      "resizeMode":"cover",
+      "backgroundColor":"#000000"
+    },
     "ios": {
       "supportsTablet": true
     },
