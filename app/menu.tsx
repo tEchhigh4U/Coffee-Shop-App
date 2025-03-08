@@ -36,7 +36,9 @@ export default function MenuScreen() {
                     <View style={styles.row}>
                         <View style={styles.menuTextRow}>
                            <Text style={[styles.menuItemTitle, styles.menuItemText]}>{item.title}</Text>
-                           <Text style={styles.menuItemText}>{item.description}</Text> 
+                           <Text style={styles.menuItemText}>{item.description}</Text>
+                           <Text style={styles.originalPrice}>HKD {item.originalPrice}</Text>
+                           <Text style={styles.discountedPrice}>Discounted - HKD {item.discountedPrice}</Text>
                         </View>
                         <Image
                             source={ MENU_IMAGES[item.id - 1]}
@@ -96,6 +98,17 @@ function createStyles(theme: any, colorScheme: ColorSchemeName) {
         },
         menuItemText:{
             color: theme.text
+        },
+        originalPrice: {
+            color: 'gray', // Dimmed color for the original price
+            textDecorationLine: 'line-through', // Strikethrough effect
+            fontSize: 14, // Slightly smaller font size
+            marginRight: 8, // Adds spacing between prices
+        },
+        discountedPrice: {
+            color: 'red', // Highlight discount price in red
+            fontWeight: 'bold', // Make it stand out
+            fontSize: 16, // Slightly larger font
         },
         menuImage:{
             width: 100,
